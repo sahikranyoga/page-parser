@@ -65,7 +65,7 @@ public class HttpsRestHandler implements RestHandler {
             } catch (URISyntaxException e) {
                 throw new RestHandlerException("httprequest cant be initiliazed ", e);
             }
-            log.info("calling target using http client send async ");
+            log.info("calling target using http client send async " + pageUrl);
             return httpClient.sendAsync(httpRequest, HttpResponse.BodyHandlers.ofInputStream());
         };
     }
