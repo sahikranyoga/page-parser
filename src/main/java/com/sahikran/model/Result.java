@@ -7,14 +7,15 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Stores News Feed item's attributes from each known page such as:
+ * 1. Item Date
+ * 2. Item text
+ * 3. Page URL the item was found
+ * and links that were found in each page
+ */
 public class Result {
-    /**
-     * Stores News Feed item's attributes from each known page such as:
-     * 1. Item Date
-     * 2. Item text
-     * 3. Page URL the item was found
-     * and links that were found in each page
-     */
+    
     private final List<FeedItem> feedItems;
 
     private final String pageUrl;

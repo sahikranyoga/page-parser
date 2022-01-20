@@ -57,11 +57,12 @@ public final class RSSPageParser implements PageParser {
                         .thenComposeAsync(restHandler.invokeARestCall(pageUrl))
                         .thenComposeAsync(getRssFeedItems())
                         .get();
+
+
         } catch (InterruptedException | ExecutionException e) {
             throw new PageParserException("exception when fetching RssItems", e);
         }
         log.info("Reading input RSS file and fetching Feed items completed, copying into Result object...");
-
         // create a result object at a url page level
         // Output:
         // the Result object should be newly created using the Builder. 

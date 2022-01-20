@@ -5,12 +5,12 @@ A page parser is a java library that has implementations to different parser imp
 ### Source build steps
  1. Build using maven
  ```
- mvn versions:set -DnewVersion=1.0
+ mvn versions:set -DnewVersion=1.1
  mvn clean install
  ```
  2. Install the jar into local maven repo
  ```
- mvn install:install-file -Dfile=target/page-parser-1.0.jar -DgroupId=com.sahikran -DartifactId=page-parser -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true
+ mvn install:install-file -Dfile=target/page-parser-1.1.jar -DgroupId=com.sahikran -DartifactId=page-parser -Dversion=1.1 -Dpackaging=jar -DgeneratePom=true
  ```
 
 ## License

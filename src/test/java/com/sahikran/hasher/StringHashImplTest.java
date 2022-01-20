@@ -24,4 +24,5 @@ public class StringHashImplTest {
         long hashValue = hash.generateHash("hello");
         assertEquals(99162322L, hashValue);
     }
+
 }

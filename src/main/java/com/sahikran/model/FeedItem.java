@@ -3,6 +3,10 @@ package com.sahikran.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+
+@JsonDeserialize(builder = FeedItem.Builder.class)
 public final class FeedItem {
     
     private final String itemText;
@@ -13,6 +17,18 @@ public final class FeedItem {
         this.itemText = itemText;
         this.itemDate = itemDate;
         this.itemUrl = itemUrl;
+    }
+
+    public String getItemText() {
+        return itemText;
+    }
+
+    public LocalDate getItemDate() {
+        return itemDate;
+    }
+
+    public String getItemUrl() {
+        return itemUrl;
     }
     
     @Override
@@ -47,6 +63,7 @@ public final class FeedItem {
         return true;
     }
 
+    @JsonPOJOBuilder(withPrefix = "add")
     public static final class Builder{
         private String itemText;
         private LocalDate itemDate;
