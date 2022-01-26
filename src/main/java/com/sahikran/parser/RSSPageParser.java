@@ -81,6 +81,7 @@ public final class RSSPageParser implements PageParser {
             .addItemDate(rssItem.getPublishedDate())
             .addItemText(rssItem.getTitle())
             .addItemUrl(rssItem.getLink())
+            .addItemDescription(rssItem.getDescription())
             .build();
     }
     

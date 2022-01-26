@@ -15,6 +15,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jackson.version>2.13.1</jackson.version>
+    <rss.reader.version>1.1-SNAPSHOT</rss.reader.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
     <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -25,8 +26,8 @@
     <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
     <maven-site-plugin.version>3.9.1</maven-site-plugin.version>
     <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>16</maven.compiler.source>
+    <maven.compiler.target>16</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -78,7 +79,7 @@
     <dependency>
 			<groupId>com.sahikran</groupId>
 			<artifactId>rss-reader</artifactId>
-			<version>1.0</version>
+			<version>${rss.reader.version}</version>
 		</dependency>
   </dependencies>
 

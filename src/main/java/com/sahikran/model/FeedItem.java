@@ -12,11 +12,13 @@ public final class FeedItem {
     private final String itemText;
     private final LocalDate itemDate;
     private final String itemUrl;
+    private final String itemDescription;
 
-    private FeedItem(String itemText, LocalDate itemDate, String itemUrl){
+    private FeedItem(String itemText, LocalDate itemDate, String itemUrl, String itemDescription){
         this.itemText = itemText;
         this.itemDate = itemDate;
         this.itemUrl = itemUrl;
+        this.itemDescription = itemDescription;
     }
 
     public String getItemText() {
@@ -29,6 +31,10 @@ public final class FeedItem {
 
     public String getItemUrl() {
         return itemUrl;
+    }
+
+    public String getItemDescription(){
+        return itemDescription;
     }
     
     @Override
@@ -68,6 +74,7 @@ public final class FeedItem {
         private String itemText;
         private LocalDate itemDate;
         private String itemUrl;
+        private String itemDescription;
 
         public Builder addItemText(String itemText){
             Objects.requireNonNull(itemText, "item text can not be empty");
@@ -87,8 +94,13 @@ public final class FeedItem {
             return this;
         }
 
+        public Builder addItemDescription(String itemDescription){
+            this.itemDescription = itemDescription;
+            return this;
+        }
+
         public FeedItem build(){
-            return new FeedItem(itemText, itemDate, itemUrl);
+            return new FeedItem(itemText, itemDate, itemUrl, itemDescription);
         }
     }
 
